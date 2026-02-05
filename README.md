@@ -1,8 +1,8 @@
 # Smart Greenhouse Monitoring System  
 
-Academic/individual prototype implementing core parts of a **smart greenhouse monitoring system** based on a given Software Requirements Specification (SRS).
+Academic/individual prototype implementing the core components of a **smart greenhouse monitoring system** in accordance with a given Software Requirements Specification (SRS).
 
-Focus: sensor data collection → threshold validation → alerting → persistent storage — with clean Persian RTL user interface.
+Focus: sensor data collection → threshold validation → alerting → persistent storage — with a clean Persian RTL user interface.
 
 ## What this project demonstrates
 
@@ -21,7 +21,7 @@ This project demonstrates:
 - Warning/alert feedback
 - Persistent storage (JSON Lines + SQLite)
 
-The current version prioritises correct data flow, architectural clarity, and domain modeling over full system completeness.
+The current version prioritises correct data flow, architectural clarity, and domain modelling over the completeness of the full system.
 
 
 
@@ -29,16 +29,16 @@ The current version prioritises correct data flow, architectural clarity, and do
 
 | Feature                               | Status       | Coverage of SRS | Comment / Limitation                                      |
 |:--------------------------------------|:------------:|:---------------:|-------------------------------------------------------------------|
-| Manual sensor data entry + validation | ✓ Complete   | FR-01 (partial) | Full Persian UI, input sanitization, meaningful errors           |
-| Threshold (min/max) configuration     | ✓ Complete   | FR-06           | Per-reading thresholds — saved with every record                 |
-| Out-of-range warning (popup)          | ✓ Partial    | FR-02           | Immediate messagebox — no persistent alert entity yet            |
-| Dual persistence layer                | ✓ Complete   | FR-09 (partial) | Every record → JSON Lines **+** SQLite — queryable & append-only |
-| Last N records table (live refresh)   | ✓ Complete   | —               | Shows last 15 entries, auto-updates after each save              |
-| Authentication & authorization        | ✗ Not done   | FR-14           | **Critical gap** — everyone has full access right now            |
-| Persistent alert list & lifecycle     | ✗ Not done   | FR-10, FR-11, FR-12 | No alert history, no acknowledge/resolve/escalate workflow      |
-| Real-time sensor polling / WebSocket  | ✗ Planned    | FR-01           | Tkinter limitation — manual entry only                           |
-| Actuator control (pump/fan/heater)    | ✗ Planned    | FR-03, FR-04, FR-05 | No simulation or real control yet                                |
-| Notification (Telegram/SMS/email)     | ✗ Planned    | FR-02           | Only local UI popup                                              |
+| Manual sensor data entry + validation |   Complete   | FR-01 (partial) | Full Persian UI, input sanitization, meaningful errors           |
+| Threshold (min/max) configuration     |   Complete   | FR-06           | Per-reading thresholds — saved with every record                 |
+| Out-of-range warning (popup)          |   Partial    | FR-02           | Immediate messagebox — no persistent alert entity yet            |
+| Dual persistence layer                |   Complete   | FR-09 (partial) | Every record → JSON Lines **+** SQLite — queryable & append-only |
+| Last N records table (live refresh)   |   Complete   | —               | Shows last 15 entries, auto-updates after each save              |
+| Authentication & authorization        |   Not done   | FR-14           | **Critical gap** — everyone has full access right now            |
+| Persistent alert list & lifecycle     |   Not done   | FR-10, FR-11, FR-12 | No alert history, no acknowledge/resolve/escalate workflow      |
+| Real-time sensor polling / WebSocket  |   Planned    | FR-01           | Tkinter limitation — manual entry only                           |
+| Actuator control (pump/fan/heater)    |   Planned    | FR-03, FR-04, FR-05 | No simulation or real control yet                                |
+| Notification (Telegram/SMS/email)     |   Planned    | FR-02           | Only local UI popup                                              |
 
 ### Key Strengths 
 
@@ -64,11 +64,11 @@ The current version prioritises correct data flow, architectural clarity, and do
 
 | ID    | Short Description                                      | Priority | Done?     | Level of completion                          |
 |-------|--------------------------------------------------------|----------|-----------|----------------------------------------------|
-| FR-01 | Display sensor values (temp, hum, CO₂, light)          | Must     | ⚠️ Partial| Manual only – no automatic 5-second polling  |
-| FR-02 | Alert when threshold exceeded                          | Must     | ✓ Partial | Local popup – no external notification       |
-| FR-06 | Configure & save thresholds                            | Must     | ✓ Yes     | Fully implemented in UI                      |
-| FR-09 | Store data & events in database                        | Must     | ✓ Yes     | SQLite + JSONL (MySQL planned later)         |
-| FR-03–05 | Irrigation & climate control                        | Must/Could | ✗ Planned | Business logic not started yet               |
+| FR-01 | Display sensor values (temp, hum, CO₂, light)          | Must     | Partial| Manual only – no automatic 5-second polling  |
+| FR-02 | Alert when threshold exceeded                          | Must     |  Partial | Local popup – no external notification       |
+| FR-06 | Configure & save thresholds                            | Must     |  Yes     | Fully implemented in UI                      |
+| FR-09 | Store data & events in database                        | Must     |  Yes     | SQLite + JSONL (MySQL planned later)         |
+| FR-03–05 | Irrigation & climate control                        | Must/Could | Planned | Business logic not started yet               |
 
 ## Planned Full-Stack Extension (In Progress)
 
@@ -93,14 +93,13 @@ The current Tkinter-based UI will serve as a functional prototype, while the ful
 - JSON Lines (immutable log)
 - dataclasses + type hints
 
+## Author
+Melika Bagheri
+Made with 💚 in Rasht, Iran <3
+February 2026
+
+
 ## How to run
 ```bash
 python greenhouse_monitor_ui.py
 
-No external dependencies required.
-Tested on Python 3.10 (Windows / Linux).
-
-
-
-
-python greenhouse_monitor_ui.py
