@@ -1,2 +1,0 @@
-{"greenhouse_id": "2023", "greenhouse_name": "mn", "zone_id": "2022", "zone_name": "kk", "sensor_id": "2021", "sensor_type": "co2", "unit": "C", "value": 2020.0, "timestamp": "2026-02-03 23:48:12", "threshold_min": 12.0, "threshold_max": 23.0}
-{"greenhouse_id": "GH-01", "greenhouse_name": "گلخانه مرکزي تهران", "zone_id": "Zone-B", "zone_name": "بخش نشا", "sensor_id": "TEMP-04", "sensor_type": "temperature", "unit": "°C", "value": 28.5, "timestamp": "2026-02-05 06:00:01", "threshold_min": 18.0, "threshold_max": 30.0}
